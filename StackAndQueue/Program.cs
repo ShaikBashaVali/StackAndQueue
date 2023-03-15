@@ -11,7 +11,7 @@
             while (flag)
             {
                 Console.WriteLine("A]Stack Linked List 1.Push 2.Peek 3.Pop 4.Empty 5.Size" +
-                    "\nB]6.Enqueue   7.exit");
+                    "\nB]6.Enqueue  7.Dequeue 8.Empty 9.Size of Queue Linked List 10.exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -42,8 +42,18 @@
                         queueLinkedList.Equeue(56);
                         queueLinkedList.Display();
                         break;
-                    
                     case 7:
+                        queueLinkedList.Dequeue();
+                        queueLinkedList.Display();
+                        break;
+                    case 8:
+                        queueLinkedList.Empty();
+                        break;
+                    case 9:
+                        int b = queueLinkedList.Size();
+                        Console.WriteLine(b);
+                        break;
+                    case 10:
                         flag = false;
                         break;
                     default:
